@@ -60,29 +60,29 @@ pubsub.PubsubController.prototype.sendMessage = function(message) {
 /**
  * Continuously fetches messages from the server.
  */
-// pubsub.PubsubController.prototype.fetchMessages = function() {
-//   var self = this;
-//   self.http.get('/fetch_messages')
-//     .success(function(data, status) {
-//       self.messages = data;
-//       self.failCount = 0;
-//     })
-//     .error(function(data, status) {
-//       self.logger.error('Failed to receive the messages. Status: ' +
-//                         status + '.');
-//       self.failCount += 1;
-//     });
-//   if (self.failCount < pubsub.PubsubController.MAX_FAILURE_COUNT) {
-//     if (self.isAutoUpdating) {
-//       self.promise = self.timeout(
-//         function() { self.fetchMessages(); },
-//         self.interval * pubsub.PubsubController.TIMEOUT_MULTIPLIER);
-//     }
-//   } else {
-//     self.errorNotice = 'Maximum failure count reached, ' +
-//       'so stopped fetching messages.';
-//     self.logger.error(self.errorNotice);
-//     self.isAutoUpdating = false;
-//     self.failCount = 0;
-//   }
-// };
+pubsub.PubsubController.prototype.fetchMessages = function() {
+  var self = this;
+  self.http.get('/fetch_messages')
+    .success(function(data, status) {
+      self.messages = data;
+      self.failCount = 0;
+    })
+    .error(function(data, status) {
+      self.logger.error('Failed to receive the messages. Status: ' +
+                        status + '.');
+      self.failCount += 1;
+    });
+  if (self.failCount < pubsub.PubsubController.MAX_FAILURE_COUNT) {
+    if (self.isAutoUpdating) {
+      self.promise = self.timeout(
+        function() { self.fetchMessages(); },
+        self.interval * pubsub.PubsubController.TIMEOUT_MULTIPLIER);
+    }
+  } else {
+    self.errorNotice = 'Maximum failure count reached, ' +
+      'so stopped fetching messages.';
+    self.logger.error(self.errorNotice);
+    self.isAutoUpdating = false;
+    self.failCount = 0;
+  }
+};

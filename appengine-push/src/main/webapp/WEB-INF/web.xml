@@ -34,16 +34,16 @@
     <servlet-name>Receive_Servlet</servlet-name>
     <url-pattern>/receive_message</url-pattern>
   </servlet-mapping>
-<!--   <servlet>
+  <servlet>
     <servlet-name>Fetch_Messages_Servlet</servlet-name>
     <servlet-class>
       com.google.cloud.pubsub.client.demos.appengine.servlet.FetchMessagesServlet
     </servlet-class>
-  </servlet> -->
-<!--   <servlet-mapping>
+  </servlet>
+  <servlet-mapping>
     <servlet-name>Fetch_Messages_Servlet</servlet-name>
     <url-pattern>/fetch_messages</url-pattern>
-  </servlet-mapping> -->
+  </servlet-mapping>
   <!-- <servlet>
     <servlet-name>Receive_File_Notification_Servlet</servlet-name>
     <servlet-class>

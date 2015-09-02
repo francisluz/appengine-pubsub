@@ -19,7 +19,7 @@
       <textarea ng-model="PubsubController.message" name="message" rows="5" cols="100"></textarea>
     </form>
     <button ng-click="PubsubController.sendMessage(PubsubController.message)">Send message</button>
-    <!-- <button ng-click="PubsubController.toggleAutoUpdate()" ng-show="PubsubController.isAutoUpdating">
+    <button ng-click="PubsubController.toggleAutoUpdate()" ng-show="PubsubController.isAutoUpdating">
         Stop auto update
     </button>
     <button ng-click="PubsubController.toggleAutoUpdate()" ng-hide="PubsubController.isAutoUpdating">
@@ -31,7 +31,7 @@
     <h2>Messages:</h2>
     <ul>
         <li ng-repeat="m in PubsubController.messages track by $index">{{ m }}</li>
-    </ul> -->
+    </ul>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
     <script src="/js/pubsub.js"></script>
   </body>
