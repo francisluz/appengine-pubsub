@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.google.cloud.pubsub.client.demos.appengine.IntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.558 sec
