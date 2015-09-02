@@ -44,7 +44,7 @@
     <servlet-name>Fetch_Messages_Servlet</servlet-name>
     <url-pattern>/fetch_messages</url-pattern>
   </servlet-mapping>
-  <!-- <servlet>
+  <servlet>
     <servlet-name>Receive_File_Notification_Servlet</servlet-name>
     <servlet-class>
       com.google.cloud.pubsub.client.demos.appengine.servlet.ReceiveFileNotificationServlet
@@ -53,7 +53,7 @@
   <servlet-mapping>
     <servlet-name>Receive_File_Notification_Servlet</servlet-name>
     <url-pattern>/receive_notification</url-pattern>
-  </servlet-mapping> -->
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>init_servlet</welcome-file>
   </welcome-file-list>
