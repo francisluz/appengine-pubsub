@@ -17,12 +17,12 @@ public final class Constants {
      * Google cloud storage object change notification watch channel identifier.
      */
     public static final String GCS_CHANNEL_ID =
-            "3755d4a9-8738-4954-b6ca-a4af805733a3";
+            "b26ae6af-97e0-4223-9c86-385a9db5d07a";
     /**
      * Google cloud storage object change notification resource identifier.
      */
     public static final String GCS_RESOURCE_ID =
-            "0WkLIVUHCLnbVM7UcTNDlXQDkeY";
+            "Q35ZJ11mZvmhZalimlxl1s7wNDw";
 
     /**
      * Prevents instantiation.
