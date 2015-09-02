@@ -121,7 +121,7 @@ public final class PubsubUtils {
      * @return a topic name.
      */
     public static String getAppTopicName() {
-        return "sub_teste"; //"topic-pubsub-api-appengine-sample";
+        return "topic-pubsub-api-appengine-sample";
     }
 
     /**
